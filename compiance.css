@@ -1,0 +1,166 @@
+
+.scan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scan .ppe {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: url('./images/ppes.png');
+  background-size: 150px 150px;
+}
+.scan .ppe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./images/ppe.png');
+  background-size: 150px 150px;
+  animation: animate 4s ease-in-out infinite;
+}
+
+/* qss */
+.scan .qss {
+  position: relative;
+  width: 200px; /* Reduced size */
+  height: 200px; /* Reduced size */
+  background: url('./images/qss_logos.png');
+  background-size: 200px 200px; /* Match the new size */
+}
+
+.scan .qss::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./images/qss_logo.png');
+  background-size: 200px 200px; /* Match the new size */
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    height: 0%; /* Animation layout remains unchanged */
+  }
+  50% {
+    height: 100%; /* Animation layout remains unchanged */
+  }
+}
+
+.scan .qss::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px; /* Adjusted thickness for smaller size */
+  background: #81FF76;
+  border-radius: 4px; /* Match the updated height */
+  filter: drop-shadow(0 0 15px #81FF76) drop-shadow(0 0 40px #81FF76); /* Adjusted shadow intensity */
+  animation: animate_line 4s ease-in-out infinite;
+}
+
+/* qss */
+.scan .saudi {
+  position: relative;
+  width: 150px; /* Reduced size */
+  height: 150px; /* Reduced size */
+  background: url('./images/arabian.png');
+  background-size: 150px 150px; /* Match the new size */
+}
+
+.scan .saudi::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./images/arab.png');
+  background-size: 150px 150px; /* Match the new size */
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    height: 0%; /* Animation layout remains unchanged */
+  }
+  50% {
+    height: 100%; /* Animation layout remains unchanged */
+  }
+}
+
+.scan .saudi::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px; /* Adjusted thickness for smaller size */
+  background: #81FF76;
+  border-radius: 6px; /* Match the updated height */
+  filter: drop-shadow(0 0 15px #81FF76) drop-shadow(0 0 40px #81FF76); /* Adjusted shadow intensity */
+  animation: animate_line 4s ease-in-out infinite;
+}
+
+@keyframes animate_line {
+  0% {
+    top: 0%; /* Animation layout remains unchanged */
+  }
+  50% {
+    top: 50%; /* Animation layout remains unchanged */
+  }
+  100% {
+    top: 100%; /* Animation layout remains unchanged */
+  }
+}
+
+.scan .ppe::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: #81FF76;
+  border-radius: 8px;
+  filter: drop-shadow(0 0 20px #81FF76) drop-shadow(0 0 60px #81FF76);
+  animation: animate_line 4s ease-in-out infinite;
+}
+
+@keyframes animate_line {
+  0%,
+  100% {
+    top: 0%;
+  }
+  50% {
+    top: 100%;
+  }
+}
+.scan h3 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  color: #81FF76;
+  filter: drop-shadow(0 0 20px #81FF76) drop-shadow(0 0 60px #81FF76);
+  animation: animate_text 3s ease-in-out infinite; /* Adjusted duration and timing function */
+}
+
+@keyframes animate_text {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

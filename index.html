@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Camera Stream</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./card.css">
+  <link rel="stylesheet" href="./compiance.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      
+    }
+    body {
+      height: 100%;
+      overflow: hidden;
+      background:  #081321 !important;
+    }
+    .stream-container {
+       width: 100%;
+
+    }
+    video {
+      width: 100%;
+  
+      object-fit: contain; 
+      border-radius:  0 0 0 4%;
+      box-shadow: 0px -6px 15px rgba(0, 0, 0, 0.8);
+      border-bottom:1px solid #23345F;
+    }
+    .header {
+        position: absolute;
+        top:0;
+        left:0;
+     
+        background:rgba(16, 37, 64,0.5);
+       
+    }
+    .footer {
+      background: rgba(26, 33, 52,0.6);
+      padding: 2rem;
+      position: absolute;
+      bottom: 0;
+      border-radius: 0px 80px 0 0;
+      box-shadow: 0px -6px 15px rgba(0, 0, 0, 0.5);
+      border-top:1px solid #23345F;
+      min-height: 24vh;
+    }
+    .card{
+        background-color: #23345F;
+        color:white;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="">
+    <div class="row">
+      <div class="col-12">
+        
+        <div class="row p-2 header" >
+          
+            <div class="col-6 ">
+              <img src="./images/ai.png" alt="Logo" class="w-25">
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+              <img src="./images/qss.png" alt="Logo" class="pt-2" style="width: 35%;" >
+            </div>
+          </div>
+          
+            
+           
+        
+      </div>
+      <div class="col-12">
+        <div class="stream-container ">
+          <video id="cameraStream" class="" autoplay playsinline></video>
+        </div>
+      </div>
+       <div class="col-12 footer">
+              <div class="row    d-none">
+               
+          
+
+
+                <div class="col-xl-12 col-lg-12 col-md-12 ">
+                 
+                  <div class="row  d-flex justify-content-center">
+                    <h1 class="slogan py-5">QSS AI Uniform Compliance </h1>
+                    <div class="col-lg-3 col-xl-3 ">
+                         
+                          <div class="scan">
+                            <div class="saudi"></div>
+                            <h3>Saudi Dress</h3>
+                          </div>
+                         
+                    </div>
+                    <div class="col-lg-3 col-xl-3">
+                         
+                      <div class="scan pt-5">
+                        <div class="qss"></div>
+                        <h3>Qss Uniform</h3>
+                      </div>
+                     
+                    </div>
+                    <div class="col-lg-3 col-xl-34">
+                     
+                      <div class="scan">
+                        <div class="ppe"></div>
+                        <h3>PPE</h3>
+                      </div>
+                 
+                    </div>
+                   
+                 
+          
+                  </div>
+                </div>
+
+
+
+              </div>
+           
+              <div class="row g-4  align-items-center ">
+
+                <div class="col-xl-4 col-lg-4 col-md-4 d-flex justify-content-center ">
+                  <div class="card-container whitelist">
+                   <div class="row ">
+                    <div class="col-lg-9  position-relative">
+                      <img class="hero-image " src="./images/drelie.jpg" alt="Spinning glass cube" />
+                      <img class="statusimg" src="./images/Check.png" alt="Status icon" />
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="row pt-2">
+                        <div class="col-lg-12">
+                          <img class="w-100 rounded-1 border-bottom " src="./images/helmet.png" alt="" />
+                        </div>
+                        <div class="col-lg-12 py-3">
+                          <img class="w-100 rounded-1 border-bottom " src="./images/mask.png" alt="" />
+                        </div>
+                        <div class="col-lg-12">
+                          <img class="w-100 rounded-1 border-bottom " src="./images/vest.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                   </div>
+                    <main class="main-content pt-4">
+                      <h5 class="text-white dot-name">
+                        <span class="dot red"></span> Dr Elie Metri
+                      </h5>
+                      <p class="df ">Chief Executive Officer</p>
+                      <div class="d-flex justify-content-between">
+                        <p class="df">Gender:<span class="gray">Male</span></p>
+                        <p class="df">Age:<span class="gray">30</span></p>
+                      </div>
+                    </main>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 d-flex justify-content-center">
+                  <div class="card-container blacklist">
+                   <div class="row ">
+                    <div class="col-lg-9  position-relative">
+                      <img class="hero-image " src="./images/sarah.jpg" alt="Spinning glass cube" />
+                      <img class="statusimg" src="./images/Close.png" alt="Status icon" />
+                    </div>
+                    <div class="col-lg-3 ">
+                      <div class="row pt-2">
+                        <div class="col-lg-12">
+                          <img class="w-100 rounded-1 border-bottom " src="./images/redhelmet.png" alt="" />
+                        </div>
+                        <div class="col-lg-12 py-3">
+                          <img class="w-100 rounded-1 border-bottom " src="./images/redmask.png" alt="" />
+                        </div>
+                        <div class="col-lg-12">
+                          <img class="w-100 rounded-1 border-bottom " src="./images/redvest.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                   </div>
+                    <main class="main-content pt-4">
+                      <h5 class="text-white">Sara Tujar</h5>
+                      <p class="df ">AI Developer</p>
+                      <div class="d-flex justify-content-between">
+                        <p class="df">Gender:<span class="gray">Female</span></p>
+                        <p class="df">Age:<span class="gray">30</span></p>
+                      </div>
+                    </main>
+                  </div>
+                </div>
+
+                <!-- <div class="col-xl-4 col-lg-4 col-md-4 d-flex justify-content-center">
+                  <div class="card-container position-relative blacklist">
+                    <img class="hero-image " src="./images/drelie.jpg" alt="Spinning glass cube" />
+                    <img class="statusimg" src="./images/Close.png" alt="Status icon" />
+                    <main class="main-content pt-4">
+                      <h5 class="text-white">Dr Elie Metri</h5>
+                      <p class="df ">Chief Executive Officer</p>
+                      <div class="d-flex justify-content-between">
+                        <p class="df">Gender:<span class="gray">Male</span></p>
+                        <p class="df">Age:<span class="gray">30</span></p>
+                      </div>
+                    </main>
+                  </div>
+                </div> -->
+
+
+                <!-- <div class="col-xl-4 col-lg-4 col-md-4 d-flex justify-content-center">
+                  <div class="card-container position-relative whitelist">
+                    <img class="hero-image " src="./images/drelie.jpg" alt="Spinning glass cube" />
+                    <img class="statusimg" src="./images/Check.png" alt="Status icon" />
+                    <main class="main-content pt-4">
+                      <h5 class="text-white">Dr Elie Metri</h5>
+                      <p class="df ">Chief Executive Officer</p>
+                      <div class="d-flex justify-content-between">
+                        <p class="df">Gender:<span class="gray">Male</span></p>
+                        <p class="df">Age:<span class="gray">30</span></p>
+                      </div>
+                    </main>
+                  </div>
+                </div> -->
+
+
+
+
+              </div>
+       
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+$(document).ready(function () {
+  const video = document.getElementById('cameraStream');
+
+  // Access the camera
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then((stream) => {
+      video.srcObject = stream; // Display the stream in the video element
+
+      // Get the video track from the stream
+      const videoTrack = stream.getVideoTracks()[0];
+
+      // Get the settings of the video track to retrieve resolution
+      const settings = videoTrack.getSettings();
+
+      console.log(`Camera Resolution: Width = ${settings.width}px, Height = ${settings.height}px`);
+    })
+    .catch((err) => {
+      console.error("Error accessing the camera: ", err);
+      alert("Unable to access the camera. Please check your device settings.");
+    });
+});
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Manrope:wght@200..800&display=swap');
+
+body{
+  font-family: "Cairo", sans-serif;
+}
+.dot-name {
+  display: flex; /* Ensures alignment with the dot */
+  align-items: center;
+}
+
+.dot {
+  width: 10px; /* Adjust the size of the circle */
+  height: 10px; /* Make it a circle by setting equal width and height */
+  border-radius: 50%; /* Makes it a circle */
+  margin-right: 8px; /* Space between the circle and the text */
+}
+
+.dot.red {
+  background-color: red;
+}
+
+a {
+    color: inherit;
+}
+
+.df{
+    color: rgb(139, 172, 218);
+    font-weight: 400;
+}
+.gray{
+    color:#cdcbd2
+}
+h1 {
+    font: var(--var-heading);
+    color: var(--var-lightest);
+    padding: 1.2em 0;
+}
+
+h2 {
+    font: var(--var-small-heading);
+    color: var(--var-lightest);
+    /* padding on .coin-base */
+}
+
+p {
+    font: var(--var-para);
+    color: var(--var-soft-blue);
+}
+
+span {
+    color: white;
+}
+/* 
+=====================
+Classes
+=====================
+*/
+
+/* LAYOUT */
+
+.card-container {
+    width: 100%;
+    max-width: 270px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 15px;
+ 
+    padding: 1.5rem;
+    position: relative;
+}
+img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+/* .statusimg {
+    position: absolute;
+    top: 30px; 
+    right: 30px; 
+    width: 40px; 
+    height: 40px;
+    z-index: 10; 
+    animation: pulse 4s infinite;
+  } */
+.statusimg {
+    position: absolute;
+    top: 10px; 
+    left: 20px; 
+    width: 40px; 
+    height: 40px;
+    z-index: 10; 
+    animation: pulse 4s infinite;
+  }
+  /* Keyframes for the pulsing effect */
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1); /* Maximum size */
+    }
+    100% {
+      transform: scale(1); /* Back to original size */
+  }
+}
+div.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.coin-base, .time-left, .card-attribute {
+    display: flex;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.card-attribute {
+    padding-bottom: 1.5em;
+    border-top: 2px solid var(--var-line-dark);
+}
+.whitelist {
+    animation: enhancedGreenGlow 2s infinite  linear;
+  }
+  
+  /* Animation for blacklist (red shadow) */
+  .blacklist {
+    animation: enhancedRedGlow 2s infinite  linear;
+  }
+  
+  /* Keyframes for enhanced green glowing shadow */
+  @keyframes enhancedGreenGlow {
+    0% {
+    
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 
+                  0 0 20px rgba(0, 255, 0, 0.3),
+                  0 0 30px rgba(0, 255, 0, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(0, 255, 0, 0.8), 
+                  0 0 45px rgba(0, 255, 0, 0.6),
+                  0 0 70px rgba(0, 255, 0, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.5), 
+                  0 0 30px rgba(0, 255, 0, 0.3),
+                  0 0 50px rgba(0, 255, 0, 0.2);
+    }
+  }
+  
+  /* Keyframes for enhanced red glowing shadow */
+  @keyframes enhancedRedGlow {
+    0% {
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 
+                  0 0 30px rgba(255, 0, 0, 0.3),
+                  0 0 50px rgba(255, 0, 0, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.8), 
+                  0 0 45px rgba(255, 0, 0, 0.6),
+                  0 0 70px rgba(255, 0, 0, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 
+                  0 0 30px rgba(255, 0, 0, 0.3),
+                  0 0 50px rgba(255, 0, 0, 0.2);
+    }
+  }
+a.hero-image-container {
+    position: relative;
+    display: block;
+
+}
+
+
+
+
+
+.small-image {
+    width: 1.2em;
+    margin-right: .5em;
+}
+
+.small-avatar {
+    width: 2em;
+    border-radius: 200px;
+    outline: 2px solid white;
+    margin-right: 1.4em;
+}
+
+div.attribution {
+    margin: 0 auto;
+    width: 100%;
+    font: var(--var-para);
+    text-align: center;
+    padding: 1.5em 0 4em 0;
+    color: var(--var-line-dark);
+}
+.attribution a {
+    color: var(--var-soft-blue);
+}
+
+@media (min-width:600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* text aniamtion */
+
+.slogan{
+    font-size:3rem;
+    text-align: center;
+    color:rgb(255, 255, 255) !important;
+  
+    animation-name:glow;
+    animation-duration:10s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+  }
+  
+  @keyframes glow {
+    0% {
+        text-shadow: 0px 0px 5px #9b9797, 0px 0px 15px #3DE8E8;
+    }
+    50% {
+        text-shadow: 0px 0px 20px #9b9797, 0px 0px 30px #3DE8E8;
+    }
+    100% {
+        text-shadow: 0px 0px 40px #9b9797, 0px 0px 50px #3DE8E8;
+    }
+}
+  
+  
